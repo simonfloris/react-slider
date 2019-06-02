@@ -54,7 +54,7 @@ function trimPreceding(length, nextValue, minDistance, min) {
 
 function addHandlers(eventMap) {
     Object.keys(eventMap).forEach(key => {
-        document.addEventListener(key, eventMap[key], false);
+        document.addEventListener(key, eventMap[key], {passive:false});
     });
 }
 
